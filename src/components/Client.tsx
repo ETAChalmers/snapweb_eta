@@ -89,7 +89,6 @@ export default function Client(props: ClientProps) {
   menuitems.push(<MenuItem key='Menu-Details' onClick={() => { handleDetailsClicked() }}>Details</MenuItem>);
   if (!props.client.connected)
     menuitems.push(<MenuItem key='Menu-Delete' onClick={() => { props.onDelete(); setAnchorEl(null); setOpen(false); }}>Delete</MenuItem>);
-
   // console.debug("Render Client " + props.client.host.name + ", id: " + props.client.id);
 
   return (
