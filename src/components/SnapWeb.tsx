@@ -7,7 +7,7 @@ import { Theme, config } from "../config";
 import { SnapControl, Snapcast } from '../snapcontrol';
 import { SnapStream } from '../snapstream';
 import { AppBar, Box, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography, IconButton, Snackbar, Alert, Button } from '@mui/material';
-import { PlayArrow as PlayArrowIcon, Stop as StopIcon, Menu as MenuIcon,ArrowBackIcon as BackIcon } from '@mui/icons-material';
+import { PlayArrow as PlayArrowIcon, Stop as StopIcon, Menu as MenuIcon,</ArrowBackIos> as BackIcon } from '@mui/icons-material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import silence from '../assets/10-seconds-of-silence.mp3';
@@ -348,6 +348,16 @@ export default function SnapWeb() {
       <div className="SnapWeb">
         <AppBar position="sticky" >
           <Toolbar>
+             <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+              onClick={(_) => { setDrawerOpen(true); }}
+            >
+              <MenuIcon />
+            </IconButton>
             <IconButton
               size="large"
               edge="start"
